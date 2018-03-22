@@ -44,8 +44,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Alumno.cs" />
+    <Compile Include="Models\CursoClass.cs" />
+    <Compile Include="Models\Curso.cs" />
+    <Compile Include="Models\Dummy.cs" />
+    <Compile Include="Models\institute.cs" />
     <Compile Include="Models\Persona.cs" />
     <Compile Include="Models\Profesor.cs" />
+    <Compile Include="Models\Salon.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

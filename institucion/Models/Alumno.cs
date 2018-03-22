@@ -18,6 +18,8 @@ namespace institucion.Models
 
         public Alumno(string nombre, string apellido) { Nombre = nombre; Apellido = apellido; }
 
+        public int RetornarVal (ref int x) { x = x + 1;  return x; }
+
         public override string ConstruirResumen()
         {
             return $"{NombreCompleto}, {NickName}, {Telefono}";

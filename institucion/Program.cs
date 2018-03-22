@@ -48,7 +48,44 @@ namespace institucion
             Console.WriteLine(alumno1.ConstruirResumen());
             Console.WriteLine(profesor.ConstruirResumen());
 
+
+            Console.WriteLine("Estructuras");
+            CursoStruct c = new CursoStruct(70);
+            c.Curso = "101-B";
+
+
+            CursoStruct newC = new CursoStruct();
+            newC.Curso = "564-A";
+
+            var cursoFreak = c;
+            cursoFreak.Curso = "666-g";
+
+            Console.WriteLine($"Curso c = {c.Curso}");
+            Console.WriteLine($"Curso freak = {cursoFreak.Curso}");
+
+            Console.WriteLine("Clases");
+            CursoClass c_class = new CursoClass(70);
+            c_class.Curso = "101-B";
+
+
+            var newC_class = new CursoStruct();
+            newC_class.Curso = "564-A";
+
+            var cursoFreak_class = c_class;
+            cursoFreak_class.Curso = "666-g";
+
+            Console.WriteLine($"Curso c = {c_class.Curso}");
+            Console.WriteLine($"Curso freak = {cursoFreak_class.Curso}");
+
+
+            Console.WriteLine("retornando valores por referencia");
+            var anum = 15;
+            Console.WriteLine(alumno1.RetornarVal(ref anum));
+            Console.WriteLine(anum);
+
+
             Console.ReadLine();
+
            
         }
     }
