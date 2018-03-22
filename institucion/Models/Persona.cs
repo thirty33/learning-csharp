@@ -8,6 +8,7 @@ namespace institucion.Models
 {
     class Persona
     {
+        public static int ContadorPersona = 0;
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
@@ -20,6 +21,13 @@ namespace institucion.Models
                 //return string.Format("{0} {1}", Nombre, Apellido); formatear ctrl + k, ctrl + d
                 return $"{this.Nombre} {this.Apellido}";
             }
+        }
+
+        protected int Participaciones { get; set; }
+
+        public Persona ()
+        {
+            ContadorPersona++;
         }
 
 
