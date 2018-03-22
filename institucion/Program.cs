@@ -35,6 +35,9 @@ namespace institucion
             {
                 Console.WriteLine($"Tipo {p.GetType()}");
                 Console.WriteLine(p.ConstruirResumen());
+
+                institute ente = p;
+                ente.ContruirLLaveSecreta("Hola");
             }
 
             a = b;
