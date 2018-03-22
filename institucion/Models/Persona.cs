@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace institucion.Models
 {
-    class Persona
+    public abstract class Persona
     {
         public static int ContadorPersona = 0;
         public int Id { get; set; }
@@ -23,12 +23,22 @@ namespace institucion.Models
             }
         }
 
+        public virtual int ImprimirEdad
+        {
+            get
+            {
+                return Edad;
+            }
+        }
+
         protected int Participaciones { get; set; }
 
         public Persona ()
         {
             ContadorPersona++;
         }
+
+        public abstract string ConstruirResumen();
 
 
 

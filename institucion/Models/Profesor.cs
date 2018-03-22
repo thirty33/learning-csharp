@@ -10,5 +10,17 @@ namespace institucion.Models
     {
         public string Catedra { get; set; }
 
+        public override string ConstruirResumen()
+        {
+            return $"{NombreCompleto}, {Catedra}, {Edad}";
+        }
+
+        public override int ImprimirEdad
+        {
+            get
+            {
+                return 16;
+            }
+        }
     }
 }

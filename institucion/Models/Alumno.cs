@@ -10,11 +10,17 @@ namespace institucion.Models
     {
         public string Email { get; set; }
         private int Inasistencias { get; set; }
+        public string NickName { get; set; }
 
         public string ListaInasistencias() { return Inasistencias.ToString(); }
 
         public string NumParticipaciones() { return Participaciones.ToString(); }
 
         public Alumno(string nombre, string apellido) { Nombre = nombre; Apellido = apellido; }
+
+        public override string ConstruirResumen()
+        {
+            return $"{NombreCompleto}, {NickName}, {Telefono}";
+        }
     }
 }
