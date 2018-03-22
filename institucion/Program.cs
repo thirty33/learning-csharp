@@ -134,11 +134,40 @@ namespace institucion
             Console.WriteLine(i);
 
 
+            Console.WriteLine("Arreglos");
+            Persona[] arregloPersonas = new Persona[5];
+            Console.WriteLine(arregloPersonas.Length);
 
+            arregloPersonas[0] = new Alumno("pedro", "fernandez");
+            arregloPersonas[1] = new Profesor() { Nombre = "Fritz", Apellido = "Perls" };
+            arregloPersonas[2] = new Alumno("", "fernandez");
+            arregloPersonas[3] = new Alumno("Juan", "fernandez");
+            arregloPersonas[4] = new Profesor() { Nombre = "albert", Apellido = "Camus" };
 
+            for (int cont = 0; cont < arregloPersonas.Length; cont++)
+            {
+                if(arregloPersonas[cont] is Alumno)
+
+                {
+                    var al = (Alumno)arregloPersonas[cont];
+                    Console.WriteLine(al.NickName != null? al.NickName : al.NombreCompleto);
+                }
+                else
+                {
+                    Console.WriteLine(arregloPersonas[cont].NombreCompleto);
+                }
+                
+            }
             Console.ReadLine();
 
            
+
+
+            
+
+
+
+
         }
     }
 }
