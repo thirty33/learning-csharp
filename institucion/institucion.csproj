@@ -47,6 +47,7 @@
     <Compile Include="Models\CursoClass.cs" />
     <Compile Include="Models\Curso.cs" />
     <Compile Include="Models\Dummy.cs" />
+    <Compile Include="Models\EstadosAlumnos.cs" />
     <Compile Include="Models\institute.cs" />
     <Compile Include="Models\Persona.cs" />
     <Compile Include="Models\Profesor.cs" />

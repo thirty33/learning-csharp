@@ -83,6 +83,58 @@ namespace institucion
             Console.WriteLine(alumno1.RetornarVal(ref anum));
             Console.WriteLine(anum);
 
+            Console.WriteLine("retornando valores sin referencia");
+            Console.WriteLine(alumno1.RetornarValWReference(anum));
+            Console.WriteLine(anum);
+
+            Console.WriteLine("Enumeraciones");
+            var alumnoEst = new Alumno("gustavo", "alarcon")
+            {
+                Id = 1,
+                Edad = 36,
+                NickName = "JOEKS",
+                Telefono = "22333222",
+                Email = "joelsuarez.1101@gmail.com",
+                Estado = EstadosAlumno.Activo
+            };
+
+
+            Console.WriteLine("el estado del alumno es" +
+                alumnoEst.Estado);
+
+            Console.WriteLine($"TIPO: {typeof (EstadosAlumno)}");
+            Console.WriteLine($"TIPO: {typeof (Alumno)}");
+
+            Console.WriteLine($"TIPO: {alumnoEst.GetType()}");
+            Persona prueba = alumnoEst;
+            Console.WriteLine($"TIPO prueba : {prueba.GetType()}");
+
+            Console.WriteLine($"TIPO: {nameof (Alumno)}");
+            Console.WriteLine($"TIPO: {sizeof (int)}");
+
+
+            Console.WriteLine("Casteo de datos");
+            // -32.000 - + 32.000
+            short s = 32000;
+            int i = 33000;
+
+            //m decimal
+            decimal d = 0.00000000000000000000025m;
+            // d double
+            double two = 0.0000000000000000043d;
+
+
+            float f = 2.35f;
+            Console.WriteLine(i);
+            s = (short) i;
+            Console.WriteLine(s);
+
+            Console.WriteLine(f);
+            i = (int)f;
+            Console.WriteLine(i);
+
+
+
 
             Console.ReadLine();
 

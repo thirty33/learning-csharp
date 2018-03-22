@@ -8,6 +8,7 @@ namespace institucion.Models
 {
     class Alumno : Persona
     {
+        public EstadosAlumno Estado { get; set; }
         public string Email { get; set; }
         private int Inasistencias { get; set; }
         public string NickName { get; set; }
@@ -19,6 +20,7 @@ namespace institucion.Models
         public Alumno(string nombre, string apellido) { Nombre = nombre; Apellido = apellido; }
 
         public int RetornarVal (ref int x) { x = x + 1;  return x; }
+        public int RetornarValWReference(int x) { x = x + 1; return x; }
 
         public override string ConstruirResumen()
         {
