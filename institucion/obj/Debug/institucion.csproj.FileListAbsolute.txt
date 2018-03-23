@@ -4,3 +4,4 @@ c:\users\yesenia\documents\visual studio 2015\Projects\institucion\institucion\b
 c:\users\yesenia\documents\visual studio 2015\Projects\institucion\institucion\obj\Debug\institucion.csprojResolveAssemblyReference.cache
 c:\users\yesenia\documents\visual studio 2015\Projects\institucion\institucion\obj\Debug\institucion.exe
 c:\users\yesenia\documents\visual studio 2015\Projects\institucion\institucion\obj\Debug\institucion.pdb
+C:\Users\yesenia\documents\visual studio 2015\Projects\institucion\institucion\bin\Debug\Files\Profesores.txt

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using institucion.Trans;
+using System.IO;
 
 namespace institucion
 {
@@ -229,7 +230,44 @@ namespace institucion
             // quitando eventos
             trasmitter.InformationSend -= Trasmitter_InformationSend;
             trasmitter.FormatearYEnviar(profe, formatter, "Alex");
+
+            Console.WriteLine("Manipulacion de documentos");
+
+            var listaProfesores = new List<Profesor>();
+
+            string[] lineas = File.ReadAllLines("./Files/Profesores.txt");
+
+            int localId = 0;
+            foreach (var line in lineas)
+            {
+                listaProfesores.Add(new Profesor() { Nombre = line, Id = localId++ });
+            }
+
+            foreach (var prof in listaProfesores) {
+                Console.WriteLine(prof.Nombre);
+            }
+
+            //binary files
+            var archivo = File.Open("profesBinarios.bin",FileMode.OpenOrCreate );
+
+            var binaryFile = new BinaryWriter(archivo);
+            foreach (var prof in listaProfesores)
+            {
+                //var bytesNombre = Encoding.UTF8.GetBytes(prof.Nombre);
+                //archivo.Write(bytesNombre, 0, bytesNombre.Length);
+
+                binaryFile.Write(profe.Nombre);
+                binaryFile.Write(profe.Id);
+            }
+
+            //liberar memoria
+            binaryFile.Close();
+            archivo.Close();
+
+
             Console.ReadLine();
+
+            
 
         }
 
@@ -251,6 +289,8 @@ namespace institucion
         {
             return new string(input.Reverse().ToArray<char>());
         }
+
+        
 
     }
 }
