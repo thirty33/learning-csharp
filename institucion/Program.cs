@@ -214,14 +214,28 @@ namespace institucion
             var profe = new Profesor() { Id = 4, Nombre = "oscar", Apellido = "perez", CodigoInterno = "Profe_smart" };
 
             var trasmitter = new TransmisorDeDatos();
+            //asigancion de eventos
+            // multicast delegate
+
+            trasmitter.InformationSend += Trasmitter_InformationSend;
+            trasmitter.InformationSend += (obj, evtargs) => { Console.WriteLine("segundo evento casteado"); };
             //trasmitter.FormatearYEnviar(profe, formatter,"Alex");
             //trasmitter.FormatearYEnviar(profe, formatter2, "Alex");
 
             // lambda functions
             trasmitter.FormatearYEnviar(profe, (s) => new string(s.Reverse().ToArray<char>()), "Alex");
             trasmitter.FormatearYEnviar(profe, formatter2, "Alex");
+
+            // quitando eventos
+            trasmitter.InformationSend -= Trasmitter_InformationSend;
             trasmitter.FormatearYEnviar(profe, formatter, "Alex");
             Console.ReadLine();
+
+        }
+
+        private static void Trasmitter_InformationSend(object sender, EventArgs e)
+        {
+            Console.WriteLine("Transmision de informacion");
 
         }
 

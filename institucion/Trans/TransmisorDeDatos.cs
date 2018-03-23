@@ -26,8 +26,14 @@ namespace institucion.Trans
         {
             Console.WriteLine("Transmision de datos:" + rawString);
 
-            
+            if (InformationSend != null)
+                InformationSend(this, new EventArgs());
         }
+
+
+        //eventos
+        public event EventHandler InformationSend;
+
 
         //public string MyFormatter(string input) { }
     }
