@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace institucion.Models
 {
-    interface institute
+    public interface institute
     {
         string CodigoInterno { get; set; }
 

@@ -5,11 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using institucion.Trans;
 
 namespace institucion
 {
     class Program
     {
+        
+
         public void rutina1()
         {
             Console.WriteLine("Gestion de Institucion");
@@ -208,10 +211,32 @@ namespace institucion
         static void Main(string[] args)
         {
 
-            
+            var profe = new Profesor() { Id = 4, Nombre = "oscar", Apellido = "perez", CodigoInterno = "Profe_smart" };
 
+            var trasmitter = new TransmisorDeDatos();
+            //trasmitter.FormatearYEnviar(profe, formatter,"Alex");
+            //trasmitter.FormatearYEnviar(profe, formatter2, "Alex");
+
+            // lambda functions
+            trasmitter.FormatearYEnviar(profe, (s) => new string(s.Reverse().ToArray<char>()), "Alex");
+            trasmitter.FormatearYEnviar(profe, formatter2, "Alex");
+            trasmitter.FormatearYEnviar(profe, formatter, "Alex");
             Console.ReadLine();
 
         }
+
+        //private static string formatter(string input)
+        //{
+        //    byte[] stringBytes = Encoding.UTF8.GetBytes(input);
+        //    return Convert.ToBase64String(stringBytes);
+        //}
+
+        private static string formatter(string input) => Convert.ToBase64String(Encoding.UTF8.GetBytes(input));
+
+        private static string formatter2(string input)
+        {
+            return new string(input.Reverse().ToArray<char>());
+        }
+
     }
 }
