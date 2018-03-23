@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using institucion.Trans;
 using System.IO;
+using institucion.DataAccess;
 
 namespace institucion
 {
@@ -263,6 +264,14 @@ namespace institucion
             //liberar memoria
             binaryFile.Close();
             archivo.Close();
+
+
+            Console.WriteLine("Conexion a base de Datos con Entity Frameworks");
+
+            var db = new InstitucionDB();
+
+            db.Profesores.AddRange(listaProfesores);
+            db.SaveChanges();
 
 
             Console.ReadLine();

@@ -5,3 +5,7 @@ c:\users\yesenia\documents\visual studio 2015\Projects\institucion\institucion\o
 c:\users\yesenia\documents\visual studio 2015\Projects\institucion\institucion\obj\Debug\institucion.exe
 c:\users\yesenia\documents\visual studio 2015\Projects\institucion\institucion\obj\Debug\institucion.pdb
 C:\Users\yesenia\documents\visual studio 2015\Projects\institucion\institucion\bin\Debug\Files\Profesores.txt
+C:\Users\yesenia\documents\visual studio 2015\Projects\institucion\institucion\bin\Debug\EntityFramework.dll
+C:\Users\yesenia\documents\visual studio 2015\Projects\institucion\institucion\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\yesenia\documents\visual studio 2015\Projects\institucion\institucion\bin\Debug\EntityFramework.xml
+C:\Users\yesenia\documents\visual studio 2015\Projects\institucion\institucion\bin\Debug\EntityFramework.SqlServer.xml
